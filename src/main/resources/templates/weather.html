@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Погода</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<h1>Wöchentliche Wettervorhersage</h1>
+
+<form id="weatherForm" th:action="@{/getWeather}" method="get">
+    <label for="dayOfWeek">Welcher Wochentag ist heute?</label>
+    <select id="dayOfWeek" name="dayOfWeek">
+        <option th:each="day : ${daysOfWeek}" th:value="${day}"
+                th:text="${day}" th:selected="${day == selectedDayOfWeek}"></option>
+    </select>
+    <button type="submit">Wetter anzeigen</button>
+</form>
+
+<div id="weatherResults" th:if="${weatherInfo}">
+    <h2 th:text="'Wettervorhersage für Heute'"></h2>
+    <p th:text="'Temperatur: ' + ${weatherInfo.temperature}"></p>
+    <p th:text="'Wind: ' + ${weatherInfo.wind}"></p>
+    <p th:text="'Niederschlagswahrscheinlichkeit: ' + ${weatherInfo.precipitation}"></p>
+</div>
+
+<div id="weeklyWeather" th:if="${weeklyWeather}">
+    <h3>Wettervorhersage für die nächsten 7 Tage:</h3>
+    <ul>
+        <li th:each="dayForecast : ${weeklyWeather}">
+            <h4 th:text="'Tag: ' + ${dayForecast.dayOfWeek}"></h4>
+            <p th:text="'Temperatur: ' + ${dayForecast.temperature}"></p>
+            <p th:text="'Wind: ' + ${dayForecast.wind}"></p>
+            <p th:text="'Niederschlagswahrscheinlichkeit: ' + ${dayForecast.precipitation}"></p>
+        </li>
+    </ul>
+</div>
+
+<div th:if="${error}">
+    <p th:text="${error}"></p>
+</div>
+
+</body>
+</html>

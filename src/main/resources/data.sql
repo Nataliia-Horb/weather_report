@@ -1,0 +1,15 @@
+INSERT INTO weather_info (day_of_week, temperature, wind, precipitation)
+VALUES (0, '+16 C', 'leichter Wind aus Südwest (10 km/h | 2 Bft)', 'Niederschlagswahrscheinlichkeit 40%'),
+       (1, '+15 C', 'schwächerer Wind aus Südwest (15 km/h | 3 Bft)', 'Niederschlagswahrscheinlichkeit 10%'),
+       (2, '+14 C', 'leichter Wind aus Südwest (5 km/h | 2 Bft)', 'Niederschlagswahrscheinlichkeit 20%'),
+       (3, '+13 C', 'leichter Wind aus Südwest (10 km/h | 2-3 Bft)', '90 % | 2-5 mm | 2 Std'),
+       (4, '+12 C', 'leichter Wind aus Südwest (10 km/h | 2-3 Bft)', 'Niederschlagswahrscheinlichkeit 40%'),
+       (5, '+11 C', 'schwächerer Wind aus Südwest (15 km/h | 3 Bft)', '80 % | 2-5 mm | 2 Std'),
+       (6, '+10 C', 'leichter Wind aus Südwest (10 km/h | 2 Bft)', 'Niederschlagswahrscheinlichkeit 35%'),
+       (0, '+16 C', 'leichter Wind aus Südwest (10 km/h | 2 Bft)', 'Niederschlagswahrscheinlichkeit 40%'),
+       (1, '+15 C', 'schwächerer Wind aus Südwest (15 km/h | 3 Bft)', 'Niederschlagswahrscheinlichkeit 10%'),
+       (2, '+14 C', 'leichter Wind aus Südwest (5 km/h | 2 Bft)', 'Niederschlagswahrscheinlichkeit 20%'),
+       (3, '+13 C', 'leichter Wind aus Südwest (10 km/h | 2-3 Bft)', '90 % | 2-5 mm | 2 Std'),
+       (4, '+12 C', 'leichter Wind aus Südwest (10 km/h | 2-3 Bft)', 'Niederschlagswahrscheinlichkeit 40%'),
+       (5, '+11 C', 'schwächerer Wind aus Südwest (15 km/h | 3 Bft)', '80 % | 2-5 mm | 2 Std'),
+       (6, '+10 C', 'leichter Wind aus Südwest (10 km/h | 2 Bft)', 'Niederschlagswahrscheinlichkeit 35%');
